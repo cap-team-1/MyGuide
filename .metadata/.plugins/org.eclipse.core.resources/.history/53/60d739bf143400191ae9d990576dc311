@@ -1,0 +1,17 @@
+package com.splitwword;
+
+import java.util.ArrayList;
+
+public class SplitoddWord{
+	static ArrayList <String>str=new ArrayList<>();
+public static void main(String[] args) {
+	str.add("mirza");
+	str.add("beg");
+	str.add("prashant");
+	str.add("people");
+	for(int i=0;i<str.size();i++) {
+	str.remove(str.indexOf(i)%2!=0);
+	}
+}
+
+}

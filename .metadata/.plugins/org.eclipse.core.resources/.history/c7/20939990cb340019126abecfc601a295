@@ -1,0 +1,29 @@
+package stream.assign_4;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import stream.Fruits;
+import stream.News;
+
+public class FindNewsId {
+	public static void main(String[] args) {
+		List<News> list = new ArrayList<>();
+		list.add(new News(111,"mirza","prashant","good"));
+		list.add(new News(112,"beg","sai"," very good"));
+		list.add(new  News(111,"mirza","krishna","good"));
+		list.add(new News(113,"shreyas","krishna","excellent"));
+		list.add(new News(114,"thrupatti","mahesh","wrost"));
+		list.add(new News(115,"onkr","sasi","awesome"));
+		list.add(new News(111,"mirza","onkar","good"));
+
+		List<Integer> list4=list.stream()
+				.sorted(Comparator.comparing(News::getComment))
+				.map(News::getNewsId)
+				.collect(Collectors.toList());
+		list4.forEach(System.out::println);
+
+	}
+}

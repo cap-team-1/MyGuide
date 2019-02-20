@@ -1,0 +1,5 @@
+package lambdaExpression.testingLambdaExpression;
+
+public class TestLambda {
+	() -> System.out.println("hi lembda");
+}

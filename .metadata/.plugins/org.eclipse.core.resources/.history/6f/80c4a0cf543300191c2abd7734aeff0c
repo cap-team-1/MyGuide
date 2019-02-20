@@ -1,0 +1,7 @@
+package java8;
+
+public interface I2 {
+public default display() {
+	System.out.println(" hi I!");
+}
+}

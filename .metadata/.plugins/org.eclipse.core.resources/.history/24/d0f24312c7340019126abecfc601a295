@@ -1,0 +1,29 @@
+package stream;
+
+public class Fruits {
+	private String Name;
+	private int Calories;
+	private int Price;
+	private String Color;
+	public Fruits(String name, int calories, int price, String Color) {
+		super();
+		Name = name;
+		Calories = calories;
+		Price = price;
+		Color = Color;
+	}
+	public String getName() {
+		return Name;
+	}
+	public int getCalories() {
+		return Calories;
+	}
+	public int getPrice() {
+		return Price;
+	}
+	public String getColor() {
+		return Color;
+	}
+	
+	
+}

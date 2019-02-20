@@ -1,0 +1,12 @@
+package lambdaExpression;
+
+public class TestLembda {
+public static void main(String[] args) {
+	FI
+}
+}
+class Test {
+() ->{
+	System.out.println("hi");
+}
+}

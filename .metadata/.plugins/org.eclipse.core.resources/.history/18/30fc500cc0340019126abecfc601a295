@@ -1,0 +1,5 @@
+package com.java8Static;
+
+public class CheckDefault implements I1,I2 {
+
+}

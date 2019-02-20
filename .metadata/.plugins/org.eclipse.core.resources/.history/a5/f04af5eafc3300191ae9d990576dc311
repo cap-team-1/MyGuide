@@ -1,0 +1,5 @@
+package Labda_2;
+
+public class Test_2 implements Lambda_2 {
+
+}

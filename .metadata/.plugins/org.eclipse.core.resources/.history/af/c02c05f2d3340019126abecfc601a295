@@ -1,0 +1,16 @@
+package stream.assign_8;
+
+import java.util.ArrayList;
+
+import stream.Traders;
+import stream.Transaction;
+
+public class FindAllTransactions {
+public static void main(String[] args) {
+	ArrayList<Transaction> list=new ArrayList<>();
+	list.add(new Transaction(new Traders("mirza","indore"),2001,100));
+	list.add(new Transaction(new Traders("pooja","banga"),2003,1002));
+	list.add(new Transaction(new Traders("shreyas","hydra"),2004,1000));
+	list.add(new Transaction(new Traders("prashant","bhopal"),2008,15));
+}
+}

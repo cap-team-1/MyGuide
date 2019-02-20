@@ -1,0 +1,7 @@
+package com.splitwword;
+
+public class SplitoddWord{
+public static void main(String[] args) {
+	
+}
+}

@@ -1,0 +1,5 @@
+package com.java8Static;
+
+public interface I2 {
+
+}

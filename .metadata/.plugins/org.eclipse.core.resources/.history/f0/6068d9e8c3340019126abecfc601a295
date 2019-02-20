@@ -1,0 +1,18 @@
+package stream;
+
+public class Transaction {
+	Traders trader; 
+	int year;
+	int value;
+	public Transaction() {
+		
+	}
+	public Transaction(Traders trader, int year, int value) {
+		super();
+		this.trader = trader;
+		this.year = year;
+		this.value = value;
+	}
+	
+	
+}

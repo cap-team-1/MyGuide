@@ -1,0 +1,7 @@
+package lambdaExpression;
+
+public class TestFunct implements FunctionalInter{
+	public static void main(String[] args) {
+		FunctionalInter fi=()->{System.out.println("hi");}
+	}
+}
