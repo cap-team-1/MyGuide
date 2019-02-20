@@ -6,8 +6,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Calendar;
 
-import com.onkar.dao.pojo.Employee;
-import com.onkar.dao.support.ConnectionFactory;
+import com.mirza.Employee;
+import com.mirza.dao.ConnectionFactory;
 
 public class EmployeeDAO {
 	
@@ -41,12 +41,32 @@ public class EmployeeDAO {
 		}
 		return emp;
 	}
+	public int update(int empNo) throws SQLException {
+		String query="update emp set sal=100 where empNo= ?";
+		Connection conn = ConnectionFactory.getConnection();
+		PreparedStatement pStatement= conn.prepareStatement(query);
+		pStatement.setInt(1, empNo);
+		int res=pStatement.executeUpdate();
+		return res;
+	}
+	public int delete(int empNo) throws SQLException {
+		String query="delete from emp where empNo= ?";
+		Connection conn = ConnectionFactory.getConnection();
+		PreparedStatement pStatement= conn.prepareStatement(query);
+		pStatement.setInt(1, empNo);
+		int res=pStatement.executeUpdate();
+		return res;
+	}
+
 
 	public static void main(String[] args) {
 		try {
 			System.out.println(new EmployeeDAO().insert(new Employee(1000, "Sachin", "Manager", 7369, new java.sql.Date(Calendar.getInstance().getTime().getTime()), 5000.00, 500.00, 20)));
-			System.out.println(new EmployeeDAO().read(1000));
-		} catch (SQLException e) {
+			//System.out.println(new EmployeeDAO().read(1000));
+			//System.out.println(new EmployeeDAO().update(1000));
+			System.out.println(new EmployeeDAO().delete(1000));
+		} 
+		catch (SQLException e) {
 			e.printStackTrace();
 		}
 	}
